@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+</head>
+<body>
+    <p>
+        <script>
+            function jumlah(){
+                var bil1=parseFloat (document.form.bilangan1.value);
+                if (isNaN(bil1))
+                    bil1=0.0;
+                var bil2=parseFloat (document.form.bilangan2.value);
+                if (isNaN(bil2))
+                    bil2=0.0;
+                var bil3=parseFloat (document.form.bilangan3.value);
+                if (isNaN(bil3))
+                    bil3=0.0;
+                var Nilai_Akhir=(((2*bil1) + (3*bil2) + (5*bil3))/10)
+                alert("Nilai Akhir Anda = " + Nilai_Akhir);
+                if(Nilai_Akhir>=80){
+                    alert("A = Selamat Anda LULUS" );
+                    }
+                    else if (Nilai_Akhir>=70){
+                    alert("B = Selamat Anda LULUS" );
+                    }
+                    else if (Nilai_Akhir>=59){
+                    alert("C = Selamat Anda LULUS");
+                    }
+                    else if (Nilai_Akhir>=49){
+                    alert("D = Anda TIDAK LULUS");
+                    }
+                    else{
+                    alert("E = Anda TIDAK LULUS");
+                    }
+                    location.reload();
+                }
+        </script>
+    </p>
+    <form name="form">
+        <h1><br>Masukkan Nilai Anda : </h1>
+        <pre>
+            Nilai Tugas :<input type="text" size="11" name="bilangan1">
+            Nilai UTS   :<input type="text" size="11" name="bilangan2">
+            Nilai UAS   :<input type="text" size="11" name="bilangan3">
+        </pre>
+        <P>
+            <input type="button" value="jumlahkan" onclick="jumlah()">
+            <input type="reset" value="ulang">
+        </form>
+
+        <p> <h3>Looping</h3>
+            <script>
+                for(var angka = 1; angka <= 10; angka++){
+                    if((angka%2)==1){
+                        document.write("angka ganjil" + '<br>');
+                    }
+                    else if ((angka%2)===0) {
+                        document.write("angka genap" + '<br>');
+                    }
+                }
+            </script>
+        </p>
+</body>
+</html>

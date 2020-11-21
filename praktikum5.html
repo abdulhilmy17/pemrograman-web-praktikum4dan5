@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS2</title>
+</head>
+<body>
+    <h1 id="nilai">(..)</h1>
+    <button id="minus">-</button>
+    <button id="plus">+</button>
+
+    <script>
+        let counterDisplayElem = document.getElementById('nilai');
+        let counterMinusElem = document.getElementById('minus');
+        let counterPlusElem = document.getElementById('plus');
+
+        let count = 0;
+
+        updateDisplay();
+
+        counterPlusElem.addEventListener("click",()=>{
+            count++;
+            updateDisplay();
+        }) ;
+
+        counterMinusElem.addEventListener("click",()=>{
+            count--;
+            updateDisplay();
+        });
+
+        function updateDisplay(){
+            counterDisplayElem.innerHTML = count;
+        };
+    </script>
+</body>
+</html>
